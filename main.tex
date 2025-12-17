@@ -78,7 +78,7 @@
 \end{center}
 \vspace{\baselineskip}
 {
-\setlength{\parskip}{0pt} % remove extra paragraph skip between field lines
+\parskip 0pt % remove extra paragraph skip between field lines
 \field{Student}\\
 \field{Cycle}\\
 \field{Tutor(s)}\\
@@ -130,23 +130,77 @@
 
 
 % -------------------- Training --------------------
+% Restore leftskip and parindent to original values
+\leftskip 0
+\parindent
+
 \section{Training related to the PhD Program}
 
-\begin{itemize}[leftmargin=1.5cm]
-  \item List of courses taken for credit, with name of the course, instructors, when and where it was held, number of credits, final grade/approval
-  \item List of the schools attended, with title of the school, web site, dates and place, final grade/approval
-\end{itemize}
+\subsubsection*{Courses taken for credit}
 
-\vspace{1cm}
+\begin{tabularx}{\linewidth}{|X|X|X|c|c|}
+\hline
+\textbf{Course name} &
+\textbf{Instructor(s)} &
+\textbf{When and where} &
+\textbf{Credits} &
+\textbf{Final grade / approval} \\
+\hline
+& & & & \\[0.8em] % blank row placeholder
+\hline
+\end{tabularx}
+
+\subsubsection*{PhD schools attended}
+
+\begin{tabularx}{\textwidth}{|X|X|X|c|}
+\hline
+\textbf{School title} &
+\textbf{Website} &
+\textbf{Dates and place} &
+\textbf{Final grade / approval} \\
+\hline
+& & & \\[0.8em]  % blank row placeholder
+\hline
+\end{tabularx}
 
 % -------------------- Other activities --------------------
 \section{Other activities}
 
-\begin{itemize}[leftmargin=1.5cm]
-  \item List of courses audited with name of the course, instructors, when and where it was held
-  \item Participation to workshops, conferences, 
-  \item Teaching assistantship (specify the name of the course, the official teacher of the course, and the number of hours)
-\end{itemize}
+\subsubsection*{Courses audited}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Course name} &
+\textbf{Instructor(s)} &
+\textbf{When and where} \\
+\hline
+& & \\[0.8em] % blank row placeholder
+\hline
+\end{tabularx}
+
+\subsubsection*{Workshops, conferences, and similar activities}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{Event name} &
+\textbf{Dates and place} &
+\textbf{Role / notes} \\
+\hline
+& & \\[0.8em]
+\hline
+\end{tabularx}
+
+\subsubsection*{Teaching assistantship}
+
+\begin{tabularx}{\textwidth}{|X|X|c|}
+\hline
+\textbf{Course name} &
+\textbf{Official teacher} &
+\textbf{Hours} \\
+\hline
+& & \\[0.8em]
+\hline
+\end{tabularx}
 
 
 % -------------------- Signatures --------------------
