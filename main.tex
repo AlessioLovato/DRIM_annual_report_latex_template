@@ -1,0 +1,165 @@
+% DRIM PhD Annual Report - LaTeX Template
+% Designed to closely mimic the structure and spacing of the provided Word document
+
+\documentclass[12pt,a4paper]{article}
+
+% -------------------- Packages --------------------
+\usepackage[a4paper,top=2.5cm,left=2cm,right=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}       % For logo image in the table
+\usepackage{mathptmx}       % For 'Times New Roman' font
+\usepackage[T1]{fontenc}
+\usepackage{scrextend}      % For left margin skip
+\usepackage{xparse}         % For optional arg in \subsection
+
+% -------------------- Page style --------------------
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% -------------------- Custom commands --------------------
+\newcommand{\field}[1]{\textbf{#1:}}
+
+% Heading 3 style helpers (Word-like look)
+\newcommand{\headingthreeformat}{\bfseries\large\scshape}
+\newcommand{\headingthree}[1]{{\headingthreeformat #1}}
+
+% -------------------- Document --------------------
+\begin{document}
+
+
+% -------------------- Section formatting --------------------
+
+% Redefine \subsection with optional max-pages argument
+\let\oldsubsection\subsection
+
+\RenewDocumentCommand{\subsection}{o m}{
+  \oldsubsection{
+    \textbf{#2}
+    \IfValueT{#1}{
+      \ifnum#1>0\relax
+        \space(max #1 page\ifnum#1>1 s\fi):
+      \fi
+    }
+  }
+}
+
+% Section formatting
+\titleformat{\section}[hang]
+  {\normalfont\headingthreeformat}
+  {\thesection.}
+  {1.2em}
+  {}
+
+  % Subsection formatting
+\titleformat{\subsection}[hang]
+  {\normalfont}
+  {\thesubsection}
+  {1.2em}
+  {}
+
+% Control left indentation ("tabs") and vertical spacing
+\titlespacing*{\section}{0pt}{1.0\baselineskip}{0.6\baselineskip}
+\titlespacing{\subsection}{2em}{0.8\baselineskip}{0.4\baselineskip}
+
+% -------------------- Header block --------------------
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figures/logo.png}\par
+\vspace{0.8\baselineskip}
+{\fontsize{14pt}{14pt}\selectfont Curriculum:}\\
+\end{center}
+\vspace{\baselineskip}
+{
+\setlength{\parskip}{0pt} % remove extra paragraph skip between field lines
+\field{Student}\\
+\field{Cycle}\\
+\field{Tutor(s)}\\
+\field{Year}\\
+\field{Contacts} e-mail, phone\\
+}
+
+% -------------------- Title --------------------
+\begin{center}
+\headingthree{Annual Report}
+\end{center}
+
+% -------------------- Paragraph Formatting --------------------
+\leftskip 4.5em
+\parindent 1.5em
+
+% -------------------- Research Activity --------------------
+\section{Research Activity}
+
+\subsection[1]{Scientific and Technological Objectives}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your text here
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[1]{State of the art and innovation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your text here
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[2]{Methodology and workplan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your text here
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[2]{Achieved results, dissemination, deviation from the original plan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your text here
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[0]{References}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Insert your text here
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% -------------------- Training --------------------
+\section{Training related to the PhD Program}
+
+\begin{itemize}[leftmargin=1.5cm]
+  \item List of courses taken for credit, with name of the course, instructors, when and where it was held, number of credits, final grade/approval
+  \item List of the schools attended, with title of the school, web site, dates and place, final grade/approval
+\end{itemize}
+
+\vspace{1cm}
+
+% -------------------- Other activities --------------------
+\section{Other activities}
+
+\begin{itemize}[leftmargin=1.5cm]
+  \item List of courses audited with name of the course, instructors, when and where it was held
+  \item Participation to workshops, conferences, 
+  \item Teaching assistantship (specify the name of the course, the official teacher of the course, and the number of hours)
+\end{itemize}
+
+
+% -------------------- Signatures --------------------
+\section*{Signatures}
+
+\vspace{0.5cm}
+
+\begin{center}
+\setlength{\tabcolsep}{1cm}
+\begin{tabular}{c c}
+\textbf{PhD Student} & \textbf{Tutor(s)}\\[1cm]
+\makebox[6cm]{\hrulefill} & \makebox[6cm]{\hrulefill}
+\end{tabular}
+\end{center}
+
+\end{document}
