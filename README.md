@@ -10,6 +10,8 @@ The template is intended for PhD students who prefer to prepare their
 report in LaTeX while still delivering a PDF that matches the expected
 layout and headings.
 
+> [!WARNING]
+> This document is **`UNOFFICIAL`**
 
 ## 1. Repository contents
 
