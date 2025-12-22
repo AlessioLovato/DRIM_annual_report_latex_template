@@ -4,7 +4,7 @@ DRIM PhD Annual Report – LaTeX Template
 This repository contains a LaTeX template for the annual report of the
 [**DRIM PhD programme**](https://drim.i-rim.it/en/) (Robotics and Intelligent Machines), designed to
 closely reproduce the structure and visual style of the official Word
-document provided by the course office.
+document (version 1.2) provided by the course office.
 
 The template is intended for PhD students who prefer to prepare their
 report in LaTeX while still delivering a PDF that matches the expected
